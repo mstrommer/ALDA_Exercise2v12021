@@ -1,6 +1,6 @@
 #define CATCH_CONFIG_RUNNER
 #define TEST 1 // Always change to 1 before your final submission to Github Classroom.
-#include "tests/catch.hpp"
+#include "lib/catch.hpp"
 #include "main.hpp"
 #include <stdlib.h>
 
@@ -15,6 +15,7 @@ int runCatchTests(int argc, char* const argv[])
 // ---------------------
 void eratosthenes(int n, int* sieve){
    //TODO
+    printf("jeööp adfa");
 }
 
 // =====================

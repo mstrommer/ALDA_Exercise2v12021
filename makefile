@@ -5,20 +5,20 @@
 CXX=g++
 CPPFLAGS=--std=c++17
 
-DEPS=main.hpp
-OBJ=main.o tests/tests.o
+DEPS=main.hpp lib/catch.hpp
+OBJ=main.o tests.o
 
 all: clean test
 
 %.o: %.cpp $(DEPS)
 	$(CXX) -c -o $@ $< $(CPPFLAGS)
 
-exercise1: $(OBJ)
+exercise2: $(OBJ)
 	$(CXX) -o $@ $^ $(CPPFLAGS)
 
-test: exercise1
+test: exercise2
 	# executes all tests
-	./exercise1
+	./exercise2
 
 clean:
-	rm -f exercise1
+	rm -f exercise2

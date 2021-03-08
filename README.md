@@ -1,4 +1,4 @@
-# Exercise 1
+# Exercise 2
 
 ## Problem Description
 
@@ -22,13 +22,13 @@ Explanations for the other files:
 - file `tests.cpp` has all tests for the activity (DO NOT CHANGE!)
 - file `catch.hpp` has the testing library  CATCH2 (DO NOT CHANGE!)
 - file `makefile` has the commands for executing activity (DO NOT CHANGE!)
-- file  `exercise1` will be generated after compiling (if you want to test locally, just execute it)
+- file  `exercise2` will be generated after compiling (if you want to test locally, just execute it)
 
 ## Commands for Local Testing
 
 - Open a console / terminal window
 - Command to build and execute tests: `make`
-    * If executable is built already, just type: `./appTests`
+    * If executable is built already, just type: `./exercise2`
 - Or use your fully fledged IDE ;) 
 
 ## Notes
