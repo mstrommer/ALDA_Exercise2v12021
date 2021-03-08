@@ -9,8 +9,9 @@
 #define main_h
 
 // Prototypes
-void eratosthenes(int n, int* sieve);
-int inversionCount(int size, int *numbers, int *inversions);
-void memswap(char *mem1, char *mem2, int size);
+float h(int n);
+int isPalindrom(char *text, int left, int right);
+int isPrime(int n);
+int isPrime(int n, int m);
 
 #endif /* main_h */

@@ -11,26 +11,29 @@ int runCatchTests(int argc, char* const argv[])
 }
 
 // =====================
-// Exercise 1 - "Sieb des Eratosthenes"
+// Exercise 1 - Harmonische Reihe
 // ---------------------
-void eratosthenes(int n, int* sieve){
-   //TODO
-    printf("jeööp adfa");
+float h(int n){
+    return 0;
 }
 
 // =====================
-// Exercise 2 - InversionCount
+// Exercise 2 - Palindrom Checker
 // ---------------------
-int inversionCount(int size, int *numbers, int *inversions){
-    //TODO
+int isPalindrom(char *text, int left, int right){
     return -1;
 }
 
 // =====================
-// Exercise 3 - MemSwap
+// Exercise 3 - isPrime
 // ---------------------
-void memswap(char *mem1, char *mem2, int size) {
-    // TODO
+
+int isPrime(int n){
+    return -1;
+}
+
+int isPrime(int n, int m){
+    return -1;
 }
 
 
@@ -45,12 +48,7 @@ int main(int argc, char* const argv[] ){
     // ---------------------
     // read some int n from the console
     // or simply set a variable
-    // create an dynamic array with the help of malloc (also free up the memory after usage again)
-    // or some static array
-    // call function eratosthenes...
-    // print all prime numbers up to n - 1
-    
-
+    // call function h within a printf statement to verify its result
     
     
     
@@ -60,13 +58,11 @@ int main(int argc, char* const argv[] ){
     // =====================
     // Exercise 2
     // ---------------------
-    // Define two arrays of equal size n
-    // Initialize one array with random ints
-    // call inversionCount and pass the parameters
-    // print all inversions and the total
+    // Initialize a char array with some text
+    // call isPalindrom and save its result
+    // print the result of the method call
    
-    
-    
+
     
     
     
@@ -75,15 +71,10 @@ int main(int argc, char* const argv[] ){
     // =====================
     // Exercise 3
     // ---------------------
-    // Define two arrays of equal size n
-    // The type can be any simple type
-    // Print the two arrays before memswap
-    // Call memswap
-    // Print the two arrays after memswap
+    // call isPrime with a positive, natural number
+    // print the result of the method call
     
-    
-    
-    
+
     
     
     

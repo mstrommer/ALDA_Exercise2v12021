@@ -6,133 +6,137 @@
 #include "lib/catch.hpp"
 #include "main.hpp"
 #include <string.h>
+#include <math.h>
 
 
 // =====================
 // tests for exercise 1
 // ---------------------
 
-TEST_CASE("Test1", "[Sieve]")
+TEST_CASE("Test1", "[h]")
 {
-    int expected [31] = {0, 0, 1, 1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0};
-    int sieve [31]  = {0};
-    eratosthenes(31,sieve);
-    INFO("Testing primes between 0 and 30 failed.");
-    for(int i = 0; i < 31; i++){
-        REQUIRE(sieve[i] == expected[i]);
-    }
+    float expected = -1.0;
+    int n = 0;
+    //eratosthenes(31,sieve);
+    INFO("Testing default (h(0) = 0)");
+    REQUIRE(fabs(expected - h(n)) < 0.01 );
 }
 
-TEST_CASE("Test2", "[Sieve]")
+TEST_CASE("Test2", "[h]")
 {
-    int expected [3] = {0, 0, 1};
-    int sieve [3]  = {0};
-    eratosthenes(3,sieve);
-    INFO("Testing primes between 0 and 2 failed.");
-    for(int i = 0; i < 3; i++){
-        REQUIRE(sieve[i] == expected[i]);
-    }
+    float expected = 1.0;
+    int n = 1;
+    //eratosthenes(31,sieve);
+    INFO("Testing for h(1) = 1");
+    REQUIRE(fabs(expected - h(n)) < 0.01 );
+}
+
+TEST_CASE("Test3", "[h]")
+{
+    float expected = 2.2833;
+    int n = 5;
+    //eratosthenes(31,sieve);
+    INFO("Testing for h(5) = 2.28...");
+    REQUIRE(fabs(expected - h(n)) < 0.01 );
+}
+
+TEST_CASE("Test4", "[h]")
+{
+    float expected = 6.7928;
+    int n = 500;
+    //eratosthenes(31,sieve);
+    INFO("Testing for h(500) = 6.79...");
+    REQUIRE(fabs(expected - h(n)) < 0.01 );
 }
 
 // =====================
 // tests for exercise 2
 // ---------------------
 
-TEST_CASE("Test3", "[InversionCount]")
+TEST_CASE("Test5", "Palindrom")
 {
-    int expected [5] = {0};
-    int numbers [5]  = {1,2,3,4,5};
-    int inversions [5] = {1,1,1,1,1};
-    inversionCount(5,numbers,inversions);
-    INFO("Testing inversions for numbers {1,2,3,4,5} failed.");
-    for(int i = 0; i < 5; i++){
-        REQUIRE(inversions[i] == expected[i]);
-    }
+    int expected = 1;
+    char text[] = "amanaplanacanalpanama";
+    int actual = isPalindrom(text, 0, (int)strlen(text)-1);
+    INFO("Testing if word \"amanaplanacanalpanama\" is a palindrom");
+    REQUIRE(expected == actual);
 }
 
-TEST_CASE("Test4", "[InversionCount]")
+TEST_CASE("Test6", "Palindrom")
 {
-    int numbers [5]  = {1,2,3,4,5};
-    int inversions [5];
-    int total = inversionCount(5,numbers,inversions);
-    INFO("Testing total inversions for numbers {1,2,3,4,5} failed.");
-    REQUIRE(total == 0);
+    int expected = 0;
+    char text[] = "covid19";
+    int actual = isPalindrom(text, 0, (int)strlen(text)-1);
+    INFO("Testing if word \"covid19\" is a palindrom");
+    REQUIRE(expected == actual);
 }
 
-TEST_CASE("Test5", "[InversionCount]")
+TEST_CASE("Test7", "Palindrom")
 {
-    int expected [9] = {3,4,2,2,2,2,2,0,0};
-    int numbers [9]  = {5,6,3,5,7,8,9,1,2};
-    int inversions [9];
-    inversionCount(9,numbers,inversions);
-    INFO("Testing inversions for numbers {5,6,3,5,7,8,9,1,2} failed.");
-    for(int i = 0; i < 9; i++){
-        REQUIRE(inversions[i] == expected[i]);
-    }
+    int expected = 1;
+    char text[] = "reliefpfeiler";
+    int actual = isPalindrom(text, 0, (int)strlen(text)-1);
+    INFO("Testing if word \"reliefpfeiler\" is a palindrom");
+    REQUIRE(expected == actual);
 }
 
-TEST_CASE("Test6", "[InversionCount]")
+TEST_CASE("Test8", "Palindrom")
 {
-    int numbers [9]  = {5,6,3,5,7,8,9,1,2};
-    int inversions [9];
-    int total = inversionCount(9,numbers,inversions);
-    INFO("Testing total inversions for numbers {5,6,3,5,7,8,9,1,2} failed.");
-    REQUIRE(total == 17);
-}
-
-TEST_CASE("Test7", "[InversionCount]")
-{
-    int expected [1] = {0};
-    int numbers [1]  = {1};
-    int inversions [1] = {1};
-    inversionCount(1,numbers,inversions);
-    INFO("Testing inversions for numbers {1} failed.");
-    for(int i = 0; i < 1; i++){
-        REQUIRE(inversions[i] == expected[i]);
-    }
-}
-
-TEST_CASE("Test8", "[InversionCount]")
-{
-    int numbers [1]  = {1};
-    int inversions [1];
-    int total = inversionCount(1,numbers,inversions);
-    INFO("Testing total inversions for numbers {1} failed.");
-    REQUIRE(total == 0);
+    int expected = 0;
+    char text[] = "ab";
+    int actual = isPalindrom(text, 0, (int)strlen(text)-1);
+    INFO("Testing if word \"ab\" is a palindrom");
+    REQUIRE(expected == actual);
 }
 
 // =====================
 // tests for exercise 3
 // ---------------------
 
-TEST_CASE("Test9", "[MemSwap]")
+TEST_CASE("Test9", "isPrime")
 {
-    int data1[10] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
-    int data2[10] = { 101, 234, 398, 434, 523, 616, 748, 856, 901, 133 };
-    int comparison1[10];
-    int comparison2[10];
-    memcpy(comparison1,data1,sizeof(data1));
-    memcpy(comparison2,data2,sizeof(data1));
-    memswap((char*)data1, (char*)data2, sizeof(data1));
-    INFO("Testing MemSwap on integer arrays failed.");
-    for(int i = 0; i < 10; i++){
-        REQUIRE(data1[i] == comparison2[i]);
-        REQUIRE(data2[i] == comparison1[i]);
-    }
+    int expected = 0;
+    int actual = isPrime(0);
+    INFO("Testing if 0 is a prime number");
+    REQUIRE(expected == actual);
 }
 
-TEST_CASE("Test10", "[MemSwap]")
+TEST_CASE("Test10", "isPrime")
 {
-    short data1[10] = { 0x7FFF, 2, 3, 4, 5, 6, 7, 8, 9, 0x7FFF};
-    short data2[10] = { 101, 234, 398, 434, 523, 616, 748, 856, 901, 133 };
-    short comparison1[10];
-    short comparison2[10];
-    memcpy(comparison1,data1,sizeof(data1));
-    memcpy(comparison2,data2,sizeof(data1));
-    memswap((char*)data1, (char*)data2, sizeof(data1));
-    INFO("Testing MemSwap on short arrays failed.");
-    for(int i = 0; i < 10; i++){
-        REQUIRE(data1[i] == comparison2[i]);
-        REQUIRE(data2[i] == comparison1[i]);
-    }
+    int expected = 1;
+    int actual = isPrime(2);
+    INFO("Testing if 2 is a prime number");
+    REQUIRE(expected == actual);
+}
+
+TEST_CASE("Test11", "isPrime")
+{
+    int expected = 0;
+    int actual = isPrime(1);
+    INFO("Testing if 1 is a prime number");
+    REQUIRE(expected == actual);
+}
+
+TEST_CASE("Test12", "isPrime")
+{
+    int expected = 1;
+    int actual = isPrime(71);
+    INFO("Testing if 71 is a prime number");
+    REQUIRE(expected == actual);
+}
+
+TEST_CASE("Test13", "isPrime")
+{
+    int expected = 0;
+    int actual = isPrime(20);
+    INFO("Testing if 20 is a prime number");
+    REQUIRE(expected == actual);
+}
+
+TEST_CASE("Test14", "isPrime")
+{
+    int expected = 1;
+    int actual = isPrime(509);
+    INFO("Testing if 509 is a prime number");
+    REQUIRE(expected == actual);
 }
