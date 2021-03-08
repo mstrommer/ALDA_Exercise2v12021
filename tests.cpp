@@ -17,7 +17,6 @@ TEST_CASE("Test1", "[h]")
 {
     float expected = -1.0;
     int n = 0;
-    //eratosthenes(31,sieve);
     INFO("Testing default (h(0) = 0)");
     REQUIRE(fabs(expected - h(n)) < 0.01 );
 }
@@ -26,7 +25,6 @@ TEST_CASE("Test2", "[h]")
 {
     float expected = 1.0;
     int n = 1;
-    //eratosthenes(31,sieve);
     INFO("Testing for h(1) = 1");
     REQUIRE(fabs(expected - h(n)) < 0.01 );
 }
@@ -35,7 +33,6 @@ TEST_CASE("Test3", "[h]")
 {
     float expected = 2.2833;
     int n = 5;
-    //eratosthenes(31,sieve);
     INFO("Testing for h(5) = 2.28...");
     REQUIRE(fabs(expected - h(n)) < 0.01 );
 }
@@ -44,7 +41,6 @@ TEST_CASE("Test4", "[h]")
 {
     float expected = 6.7928;
     int n = 500;
-    //eratosthenes(31,sieve);
     INFO("Testing for h(500) = 6.79...");
     REQUIRE(fabs(expected - h(n)) < 0.01 );
 }
@@ -53,7 +49,7 @@ TEST_CASE("Test4", "[h]")
 // tests for exercise 2
 // ---------------------
 
-TEST_CASE("Test5", "Palindrom")
+TEST_CASE("Test5", "[Palindrom]")
 {
     int expected = 1;
     char text[] = "amanaplanacanalpanama";
@@ -62,7 +58,7 @@ TEST_CASE("Test5", "Palindrom")
     REQUIRE(expected == actual);
 }
 
-TEST_CASE("Test6", "Palindrom")
+TEST_CASE("Test6", "[Palindrom]")
 {
     int expected = 0;
     char text[] = "covid19";
@@ -71,7 +67,7 @@ TEST_CASE("Test6", "Palindrom")
     REQUIRE(expected == actual);
 }
 
-TEST_CASE("Test7", "Palindrom")
+TEST_CASE("Test7", "[Palindrom]")
 {
     int expected = 1;
     char text[] = "reliefpfeiler";
@@ -80,7 +76,7 @@ TEST_CASE("Test7", "Palindrom")
     REQUIRE(expected == actual);
 }
 
-TEST_CASE("Test8", "Palindrom")
+TEST_CASE("Test8", "[Palindrom]")
 {
     int expected = 0;
     char text[] = "ab";
@@ -93,7 +89,7 @@ TEST_CASE("Test8", "Palindrom")
 // tests for exercise 3
 // ---------------------
 
-TEST_CASE("Test9", "isPrime")
+TEST_CASE("Test9", "[isPrime]")
 {
     int expected = 0;
     int actual = isPrime(0);
@@ -101,15 +97,7 @@ TEST_CASE("Test9", "isPrime")
     REQUIRE(expected == actual);
 }
 
-TEST_CASE("Test10", "isPrime")
-{
-    int expected = 1;
-    int actual = isPrime(2);
-    INFO("Testing if 2 is a prime number");
-    REQUIRE(expected == actual);
-}
-
-TEST_CASE("Test11", "isPrime")
+TEST_CASE("Test10", "[isPrime]")
 {
     int expected = 0;
     int actual = isPrime(1);
@@ -117,7 +105,15 @@ TEST_CASE("Test11", "isPrime")
     REQUIRE(expected == actual);
 }
 
-TEST_CASE("Test12", "isPrime")
+TEST_CASE("Test11", "[isPrime]")
+{
+    int expected = 1;
+    int actual = isPrime(2);
+    INFO("Testing if 2 is a prime number");
+    REQUIRE(expected == actual);
+}
+
+TEST_CASE("Test12", "[isPrime]")
 {
     int expected = 1;
     int actual = isPrime(71);
@@ -125,7 +121,7 @@ TEST_CASE("Test12", "isPrime")
     REQUIRE(expected == actual);
 }
 
-TEST_CASE("Test13", "isPrime")
+TEST_CASE("Test13", "[isPrime]")
 {
     int expected = 0;
     int actual = isPrime(20);
@@ -133,7 +129,7 @@ TEST_CASE("Test13", "isPrime")
     REQUIRE(expected == actual);
 }
 
-TEST_CASE("Test14", "isPrime")
+TEST_CASE("Test14", "[isPrime]")
 {
     int expected = 1;
     int actual = isPrime(509);
