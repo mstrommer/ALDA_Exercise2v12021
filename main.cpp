@@ -1,7 +1,7 @@
 #define CATCH_CONFIG_RUNNER
 #define TEST 1 // Always change to 1 before your final submission to Github Classroom.
 #include "lib/catch.hpp"
-#include "main.hpp"
+#include "recursion.hpp"
 #include <stdlib.h>
 
 // DO NOT CHANGE THIS METHOD
@@ -9,33 +9,6 @@ int runCatchTests(int argc, char* const argv[])
 {
     return Catch::Session().run(argc, argv);
 }
-
-// =====================
-// Exercise 1 - Harmonische Reihe
-// ---------------------
-float h(int n){
-    return 0;
-}
-
-// =====================
-// Exercise 2 - Palindrom Checker
-// ---------------------
-int isPalindrom(char *text, int left, int right){
-    return -1;
-}
-
-// =====================
-// Exercise 3 - isPrime
-// ---------------------
-
-// Define an additional prototype here like:
-// int isPrime_(int n, int m);
-// to use as a recursive funtion called by int isPrime(int n)
-
-int isPrime(int n){
-    return -1;
-}
-
 
 /*
  Test your C knowledge in the main function, but leave the very last lines of code unchanged. 
@@ -52,9 +25,6 @@ int main(int argc, char* const argv[] ){
     
     
     
-    
-    
-
     // =====================
     // Exercise 2
     // ---------------------
@@ -64,10 +34,6 @@ int main(int argc, char* const argv[] ){
    
 
     
-    
-    
-    
-    
     // =====================
     // Exercise 3
     // ---------------------
@@ -75,11 +41,6 @@ int main(int argc, char* const argv[] ){
     // print the result of the method call
     
 
-    
-    
-    
-    
-    
     
     // DO NOT CHANGE CODE AFTER THIS LINE
     // This is where automatic testing starts, when the define macro constant is set to 1.

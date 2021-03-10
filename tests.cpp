@@ -4,7 +4,7 @@
 
 //#define CATCH_CONFIG_MAIN // defines main() automatically
 #include "lib/catch.hpp"
-#include "main.hpp"
+#include "recursion.hpp"
 #include <string.h>
 #include <math.h>
 

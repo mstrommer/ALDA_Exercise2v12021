@@ -5,8 +5,8 @@
 CXX=g++
 CPPFLAGS=--std=c++17
 
-DEPS=main.hpp lib/catch.hpp
-OBJ=main.o tests.o
+DEPS=recursion.hpp lib/catch.hpp
+OBJ=main.o recursion.o tests.o
 
 all: clean test
 
