@@ -12,6 +12,5 @@
 float h(int n);
 int isPalindrom(char *text, int left, int right);
 int isPrime(int n);
-int isPrime(int n, int m);
 
 #endif /* main_h */

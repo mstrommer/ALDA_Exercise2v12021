@@ -28,11 +28,11 @@ int isPalindrom(char *text, int left, int right){
 // Exercise 3 - isPrime
 // ---------------------
 
-int isPrime(int n){
-    return -1;
-}
+// Define an additional prototype here like:
+// int isPrime_(int n, int m);
+// to use as a recursive funtion called by int isPrime(int n)
 
-int isPrime(int n, int m){
+int isPrime(int n){
     return -1;
 }
 
