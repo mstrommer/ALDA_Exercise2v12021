@@ -61,18 +61,18 @@ TEST_CASE("Test5", "[Palindrom]")
 TEST_CASE("Test6", "[Palindrom]")
 {
     int expected = 0;
-    char text[] = "covid19";
+    char text[] = "ccovid19cc";
     int actual = isPalindrom(text, 0, (int)strlen(text)-1);
-    INFO("Testing if word \"covid19\" is a palindrom");
+    INFO("Testing if word \"ccovid19cc\" is a palindrom");
     REQUIRE(expected == actual);
 }
 
 TEST_CASE("Test7", "[Palindrom]")
 {
-    int expected = 1;
-    char text[] = "reliefpfeiler";
+    int expected = 0;
+    char text[] = "reliefnichtpfeiler";
     int actual = isPalindrom(text, 0, (int)strlen(text)-1);
-    INFO("Testing if word \"reliefpfeiler\" is a palindrom");
+    INFO("Testing if word \"reliefnichtpfeiler\" is a palindrom");
     REQUIRE(expected == actual);
 }
 
@@ -124,8 +124,8 @@ TEST_CASE("Test12", "[isPrime]")
 TEST_CASE("Test13", "[isPrime]")
 {
     int expected = 0;
-    int actual = isPrime(20);
-    INFO("Testing if 20 is a prime number");
+    int actual = isPrime(85);
+    INFO("Testing if 85 is a prime number");
     REQUIRE(expected == actual);
 }
 
